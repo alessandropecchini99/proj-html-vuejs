@@ -1,0 +1,8 @@
+@mixin myContainer {
+  width: 93%;
+  height: 100%;
+  margin-inline: auto;
+}
+
+// @use "../assets/variables.scss" as *;
+// @include myContainer;
