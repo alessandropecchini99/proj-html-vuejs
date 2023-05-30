@@ -2,6 +2,8 @@
 export default {};
 </script>
 
-<template>Carousell</template>
+<template>Carousell-</template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "../assets/variables.scss" as *;
+</style>

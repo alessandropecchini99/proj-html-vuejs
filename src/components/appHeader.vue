@@ -54,8 +54,7 @@ export default {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               reiciendis. Odit quos corporis veritatis consectetur, amet
-              consequatur minus maxime soluta esse, aliquid vel omnis vero,
-              facere quam ea deleniti eveniet.
+              consequatur minus maxime soluta esse, aliquid vel omnis vero.
             </p>
             <button>REGISTRER NOW</button>
           </div>
@@ -71,8 +70,7 @@ export default {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               reiciendis. Odit quos corporis veritatis consectetur, amet
-              consequatur minus maxime soluta esse, aliquid vel omnis vero,
-              facere quam ea deleniti eveniet.
+              consequatur minus maxime soluta esse, aliquid vel omnis vero.
             </p>
             <button>REGISTRER NOW</button>
           </div>
@@ -88,8 +86,7 @@ export default {
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam,
               reiciendis. Odit quos corporis veritatis consectetur, amet
-              consequatur minus maxime soluta esse, aliquid vel omnis vero,
-              facere quam ea deleniti eveniet.
+              consequatur minus maxime soluta esse, aliquid vel omnis vero.
             </p>
             <button>REGISTRER NOW</button>
           </div>
@@ -119,15 +116,15 @@ export default {
   z-index: 100;
 
   img {
-    width: 260px;
+    width: 230px;
     cursor: pointer;
   }
 
   ul {
     list-style: none;
     display: flex;
-    gap: 3em;
-    font-size: 1.2em;
+    gap: 1em;
+    font-size: 1.35em;
     margin: 0px;
 
     li {
@@ -141,10 +138,11 @@ export default {
   }
 
   .nav-icon {
+    width: 230px;
     display: flex;
     justify-content: end;
-    gap: 1.5em;
-    font-size: 1.5em;
+    gap: 2em;
+    font-size: 1.35em;
 
     i {
       cursor: pointer;
@@ -205,7 +203,7 @@ export default {
   //   JUMBO
   .jumbo {
     @include myContainer;
-    width: 65%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -218,11 +216,14 @@ export default {
       font-size: 6em;
       font-weight: 700;
       letter-spacing: 1px;
+      cursor: default;
     }
 
     p {
+      width: 65%;
       font-size: 1.25em;
       font-weight: 100;
+      cursor: default;
     }
 
     button {

@@ -149,6 +149,10 @@ footer {
         li {
           padding-bottom: 1em;
           font-size: 1.4em;
+
+          &:hover {
+            color: #20bcff;
+          }
         }
       }
     }

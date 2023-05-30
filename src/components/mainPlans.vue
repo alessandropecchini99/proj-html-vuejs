@@ -2,6 +2,8 @@
 export default {};
 </script>
 
-<template>Plans</template>
+<template>Plans-</template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@use "../assets/variables.scss" as *;
+</style>
