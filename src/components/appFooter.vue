@@ -170,7 +170,8 @@ footer {
     @include myContainer;
     height: fit-content;
     padding-top: 2em;
-    font-size: 1.1em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
 
     display: flex;
     justify-content: space-between;
