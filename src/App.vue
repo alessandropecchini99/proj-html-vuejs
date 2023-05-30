@@ -15,21 +15,17 @@ export default {
 </script>
 
 <template>
-  <header>
-    <appHeader />
-  </header>
+  <!-- SEZIONI PRINCIPALI -->
+  <appHeader />
 
-  <main>
-    <appMain />
-  </main>
+  <appMain />
 
-  <footer>
-    <appFooter />
-  </footer>
+  <appFooter />
 
-  <div class="top">
+  <!-- TOP BUTTON -->
+  <section class="top">
     <a href="#"> <i class="fa-solid fa-chevron-up"></i> TOP </a>
-  </div>
+  </section>
 </template>
 
 <style lang="scss">

@@ -7,7 +7,7 @@ export default {
 </script>
 
 <template>
-  <section>
+  <header>
     <!-- NAVBAR -->
     <div class="navbar">
       <img src="../assets/img/header/logo-light.png" alt="" />
@@ -33,9 +33,11 @@ export default {
     <div id="myCarousel" class="carousel slide">
       <!-- bottoni per scelta immagine -->
       <ol class="carousel-indicators">
-        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active">
-          <i class="fa-solid fa-circle"></i>
-        </li>
+        <li
+          data-bs-target="#myCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></li>
         <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
         <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
       </ol>
@@ -94,7 +96,7 @@ export default {
         </div>
       </div>
     </div>
-  </section>
+  </header>
 </template>
 
 <style lang="scss" scoped>
@@ -182,11 +184,14 @@ export default {
   color: white;
 
   //   PROVARE A MODIFICARE I CLICK DEL CAROSELLO
-  .carousel-indicators {
-    li {
-      padding: 0px;
-    }
-  }
+  //   .carousel-indicators {
+  //     color: black;
+  //     li {
+  //       width: 20px;
+  //       height: 20px;
+  //       border-radius: 100%;
+  //     }
+  //   }
   .carousel-item {
     height: 100vh;
 
