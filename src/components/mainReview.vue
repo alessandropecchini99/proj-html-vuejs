@@ -7,6 +7,7 @@ export default {
 </script>
 
 <template>
+  <!-- REVIEW -->
   <section>
     <!-- carosello -->
     <div id="carouselExampleCaptions" class="carousel slide">
@@ -130,6 +131,7 @@ section {
       align-items: center;
       gap: 2.5em;
       text-align: center;
+      cursor: default;
 
       img {
         height: 130px;

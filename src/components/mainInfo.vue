@@ -3,6 +3,7 @@ export default {};
 </script>
 
 <template>
+  <!-- INFO -->
   <section>
     <!-- card delle icone -->
     <div class="icon">
