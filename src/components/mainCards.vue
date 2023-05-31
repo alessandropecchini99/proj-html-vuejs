@@ -1,69 +1,14 @@
 <script>
+import { store } from "../store";
 export default {
   data() {
     return {
-      activeIndex: 0,
-      arrCards: [
-        {
-          cardTitle: `What we do`,
-          title: `Learning Possibilities`,
-          paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus id consequatur laudantium sint consequuntur pariatur nulla dolore! Molestiae deleniti autem dolor, officia voluptatum fugit quae, voluptate provident voluptates iste sequi.`,
-          list: [
-            `We enrich lives through learning.`,
-            `Maximizing potential through individual attention.`,
-            `The trusted name for specialized training.`,
-            `People teach. People learn. This is where they connect.`,
-          ],
-          image: `src/assets/img/main/cards/icon-1.png`,
-        },
-        {
-          cardTitle: `Degree Programme`,
-          title: `Degree Prova`,
-          paragraph: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum consequatur quasi, totam veritatis et nisi fugiat nemo eveniet eius vero nobis quibusdam id quos ut soluta doloremque sequi sit quae.`,
-          list: [`prova 1`, `prova 2`, `prova 3`],
-          image: `src/assets/img/main/cards/icon-2.png`,
-        },
-        {
-          cardTitle: `Career Achievements`,
-          title: `Career Prova`,
-          paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ut iure sed accusantium harum! Debitis repudiandae obcaecati accusantium aliquid maxime, reiciendis ullam repellendus ducimus officia iure optio mollitia dicta possimus!`,
-          list: [`prova 1`, `prova 2`, `prova 3`, `prova 4`],
-          image: `src/assets/img/main/cards/icon-3.png`,
-        },
-        {
-          cardTitle: `Personal Management`,
-          title: `Personal Prova`,
-          paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus id consequatur laudantium sint consequuntur pariatur nulla dolore! Molestiae deleniti autem dolor, officia voluptatum fugit quae, voluptate provident voluptates iste sequi.`,
-          list: [`prova 1`, `prova 2`, `prova 3`, `prova 4`, `prova 5`],
-          image: `src/assets/img/main/cards/icon-4.png`,
-        },
-        {
-          cardTitle: `Steps To Success`,
-          title: `Steps Prova`,
-          paragraph: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, laboriosam officiis quam voluptatum aliquid esse consequatur debitis veritatis architecto culpa quos pariatur sunt impedit nihil explicabo dolore quis perspiciatis qui.`,
-          list: [`prova 1`, `prova 2`],
-          image: `src/assets/img/main/cards/icon-5.png`,
-        },
-        {
-          cardTitle: `Knowledge Transfer`,
-          title: `Knowledge Prova`,
-          paragraph: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus id consequatur laudantium sint consequuntur pariatur nulla dolore! Molestiae deleniti autem dolor, officia voluptatum fugit quae, voluptate provident voluptates iste sequi.`,
-          list: [
-            `prova 1`,
-            `prova 2`,
-            `prova 3`,
-            `prova 4`,
-            `prova 5`,
-            `prova 6`,
-          ],
-          image: `src/assets/img/main/cards/icon-6.png`,
-        },
-      ],
+      store,
     };
   },
   methods: {
     select(index) {
-      this.activeIndex = index;
+      this.store.cardActiveIndex = index;
     },
   },
 };
@@ -76,11 +21,11 @@ export default {
       <!-- card disponibili -->
       <div class="card-disponibili">
         <div
-          v-for="(miniCard, index) in arrCards"
+          v-for="(miniCard, index) in store.arrCards"
           :key="index"
           :class="{
-            active: index == activeIndex,
-            lastItem: index === arrCards.length - 1,
+            active: index == store.cardActiveIndex,
+            lastItem: index === store.arrCards.length - 1,
           }"
           @click="select(index)"
         >
@@ -91,16 +36,16 @@ export default {
       <!-- card selezionata -->
       <div class="card-selezionata">
         <div
-          v-for="(card, index) in arrCards"
+          v-for="(card, index) in store.arrCards"
           :key="index"
-          v-show="index === activeIndex"
+          v-show="index === store.cardActiveIndex"
         >
           <h1>{{ card.title }}</h1>
           <p>{{ card.paragraph }}</p>
           <ul>
             <li v-for="testo in card.list" :key="testo">
               <i class="fa-solid fa-check"></i>
-              <span>{{ testo }}</span>
+              <span>{{ testo }} </span>
             </li>
           </ul>
           <img :src="card.image" :alt="card.cardTitle" />
@@ -114,11 +59,14 @@ export default {
 @use "../assets/variables.scss" as *;
 
 section {
+  height: 700px;
+  display: flex;
+  justify-content: center;
+
   .myContainer {
     @include myContainer;
     height: fit-content;
-    padding-top: 5em;
-    padding-bottom: 8em;
+    padding-top: 4.5em;
 
     display: flex;
     .card-disponibili {
@@ -172,6 +120,7 @@ section {
         color: grey;
         padding-bottom: 2.5em;
         margin: 0px;
+        width: 800px;
       }
 
       ul {

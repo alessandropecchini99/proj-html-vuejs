@@ -1,5 +1,12 @@
 <script>
-export default {};
+import { store } from "../store";
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+};
 </script>
 
 <template>
@@ -7,29 +14,9 @@ export default {};
   <section>
     <!-- card delle icone -->
     <div class="icon">
-      <div class="card">
-        <img src="../assets/img/main/info/icon-1.png" alt="" />
-        <p>Languages</p>
-      </div>
-      <div class="card">
-        <img src="../assets/img/main/info/icon-2.png" alt="" />
-        <p>Software</p>
-      </div>
-      <div class="card">
-        <img src="../assets/img/main/info/icon-3.png" alt="" />
-        <p>Business</p>
-      </div>
-      <div class="card">
-        <img src="../assets/img/main/info/icon-4.png" alt="" />
-        <p>Chemistry</p>
-      </div>
-      <div class="card">
-        <img src="../assets/img/main/info/icon-5.png" alt="" />
-        <p>Science</p>
-      </div>
-      <div class="card">
-        <img src="../assets/img/main/info/icon-6.png" alt="" />
-        <p>DIY & Craft</p>
+      <div v-for="(icon, index) in store.arrIcons" :key="index" class="card">
+        <img :src="icon.image" :alt="icon.text" />
+        <p>{{ icon.text }}</p>
       </div>
     </div>
 

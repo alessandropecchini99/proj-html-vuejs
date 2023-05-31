@@ -1,5 +1,11 @@
 <script>
+import { store } from "../store";
 export default {
+  data() {
+    return {
+      store,
+    };
+  },
   mounted() {
     const myCarouselElement = document.querySelector("#myCarousel");
   },
@@ -36,7 +42,29 @@ export default {
       </div>
       <!-- immagini del carosello -->
       <div class="carousel-inner">
-        <div class="carousel-item active">
+        <div
+          v-for="(review, index) in store.arrReview"
+          :key="index"
+          class="carousel-item"
+          :class="{ active: index == store.reviewActiveIndex }"
+        >
+          <img
+            src="../assets/img/main/review/img-trasparente.png"
+            class="d-block w-100"
+            alt="trasparente"
+          />
+          <div class="revStyle carousel-caption">
+            <img :src="review.image" :alt="review.name" />
+            <p>
+              {{ review.text }}
+            </p>
+            <div>
+              <h3>{{ review.name }}</h3>
+              <h5>{{ review.role }}</h5>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="carousel-item active">
           <img
             src="../assets/img/main/review/img-trasparente.png"
             class="d-block w-100"
@@ -54,9 +82,8 @@ export default {
               <h3>Joan Collins</h3>
               <h5>STUDENT</h5>
             </div>
-          </div>
-        </div>
-        <div class="carousel-item">
+          </div> -->
+        <!-- <div class="carousel-item">
           <img
             src="../assets/img/main/review/img-trasparente.png"
             class="d-block w-100"
@@ -75,8 +102,8 @@ export default {
               <h5>STUDENT</h5>
             </div>
           </div>
-        </div>
-        <div class="carousel-item">
+        </div> -->
+        <!-- <div class="carousel-item">
           <img
             src="../assets/img/main/review/img-trasparente.png"
             class="d-block w-100"
@@ -95,7 +122,7 @@ export default {
               <h5>STUDENT</h5>
             </div>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
