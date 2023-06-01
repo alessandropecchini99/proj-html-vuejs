@@ -50,7 +50,7 @@ export default {
 
   <!-- copyrights -->
   <div class="copyright">
-    <p>Copyrights 2017 Mikado Themes</p>
+    <p>Copyrights 2017 ©Mikado Themes</p>
     <div class="copy-info">
       <p>CALL +44 300 0266</p>
       <p>FOLLOW US</p>
