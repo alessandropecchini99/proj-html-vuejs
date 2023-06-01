@@ -112,7 +112,7 @@ export default {
     p {
       width: 65%;
       font-size: 1.25em;
-      font-weight: 100;
+      font-weight: 300;
       cursor: default;
     }
 

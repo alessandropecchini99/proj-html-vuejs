@@ -185,6 +185,12 @@ hr {
       display: flex;
       align-items: center;
       gap: 0.8em;
+
+      i {
+        &:hover {
+          color: rgb(218, 218, 218);
+        }
+      }
     }
   }
 }
