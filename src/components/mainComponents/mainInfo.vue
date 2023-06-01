@@ -202,6 +202,7 @@ section {
       display: flex;
       flex-direction: column;
       gap: 3em;
+      cursor: default;
 
       h1 {
         margin: 0px;
@@ -209,7 +210,6 @@ section {
         font-family: "Merriweather", serif;
         font-weight: 700;
         font-size: 3em;
-        cursor: default;
       }
 
       p {
