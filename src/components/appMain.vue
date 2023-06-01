@@ -4,12 +4,14 @@ import mainReview from "./mainReview.vue";
 import mainCards from "./mainCards.vue";
 import mainCarousell from "./mainCarousell.vue";
 import mainPlans from "./mainPlans.vue";
+import mainLogo from "./mainLogo.vue";
 
 export default {
   data() {
     return {
+      // ARRAY PLANS
       arrPlans: [
-        `Number of Couses`,
+        `Number of Courses`,
         `Time`,
         `Web Designing`,
         `Human-Centered Design`,
@@ -44,6 +46,13 @@ export default {
           text: [`6`, `30 Days`, true, true, true, true, true, true],
         },
       ],
+      // ARRAY LOGO
+      arrLogo: [
+        `src/assets/img/footer/iAcademy.png`,
+        `src/assets/img/footer/uni.png`,
+        `src/assets/img/footer/edu.png`,
+        `src/assets/img/footer/teach.png`,
+      ],
     };
   },
   components: {
@@ -52,6 +61,7 @@ export default {
     mainCards,
     mainCarousell,
     mainPlans,
+    mainLogo,
   },
 };
 </script>
@@ -63,6 +73,7 @@ export default {
     <mainCards />
     <mainCarousell />
     <mainPlans :arrPlans="this.arrPlans" :arrPlanType="this.arrPlanType" />
+    <mainLogo :arrLogo="this.arrLogo" :arrLogoHover="this.arrLogoHover" />
   </main>
 </template>
 

@@ -73,6 +73,7 @@ export default {};
 @use "../assets/variables.scss" as *;
 
 footer {
+  cursor: default;
   height: 700px;
   background-color: #222222;
   color: #959595;
@@ -88,11 +89,11 @@ footer {
     .courses,
     .supporto,
     .mappa {
-      flex-basis: calc((100% / 4) - 1em);
+      flex-basis: calc(100% / 4);
 
       h1 {
         color: white;
-        font-size: 2.2em;
+        font-size: 2em;
         font-family: "Merriweather", serif;
         margin: 0px;
         padding-bottom: 1em;
@@ -101,7 +102,7 @@ footer {
 
     .contact {
       img {
-        width: 220px;
+        width: 210px;
         padding-bottom: 2em;
       }
 
@@ -132,6 +133,9 @@ footer {
         h4 {
           font-size: 1.5em;
           font-family: "Merriweather", serif;
+          &:hover {
+            color: #bababa;
+          }
         }
 
         p {

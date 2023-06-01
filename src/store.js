@@ -106,67 +106,86 @@ export const store = reactive({
   ],
 
   // CAROSELLO ----------------
+
+  corsi: [{}, {}, {}],
+
   corsi1: [
     {
       image: `src/assets/img/main/carosello/corso-1.jpg`,
       title: `Android Developer`,
       teacher: `David Sanders`,
-      text: `lorem  ddd`,
+      bedge: `FREE`,
+      text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem tempora odio ducimus voluptates voluptatum consectetur.`,
       tag: `PROGRAMMING`,
     },
     {
       image: `src/assets/img/main/carosello/corso-2.jpg`,
       title: `Web Designing`,
       teacher: `Jennifer Powell`,
-      text: `lorem adsafs ddd`,
+      bedge: `FREE`,
+      text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reiciendis voluptatibus repellendus eligendi ab? Perspiciatis facilis.`,
       tag: `PROGRAMMING`,
     },
     {
       image: `src/assets/img/main/carosello/corso-3.jpg`,
       title: `Financial Modelling`,
       teacher: `Edward Bowman`,
-      text: `lorem ss ddd`,
+      bedge: `20€`,
+      text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio perferendis cumque iste sapiente ab culpa voluptatem quod.`,
       tag: `BUSINESS    `,
     },
   ],
-  corsi2: [
-    {
-      title: `Financial Modelling`,
-      teacher: `Edward Bowman`,
-      text: `lorem ss ddd`,
-      tag: `BUSINESS    `,
-    },
-    {
-      title: `Web Designing`,
-      teacher: `Jennifer Powell`,
-      text: `lorem adsafs ddd`,
-      tag: `PROGRAMMING`,
-    },
-    {
-      title: `Android Developer`,
-      teacher: `David Sanders`,
-      text: `lorem  ddd`,
-      tag: `PROGRAMMING`,
-    },
-  ],
-  corsi3: [
-    {
-      title: `Web Designing`,
-      teacher: `Jennifer Powell`,
-      text: `lorem adsafs ddd`,
-      tag: `PROGRAMMING`,
-    },
-    {
-      title: `Financial Modelling`,
-      teacher: `Edward Bowman`,
-      text: `lorem ss ddd`,
-      tag: `BUSINESS    `,
-    },
-    {
-      title: `Android Developer`,
-      teacher: `David Sanders`,
-      text: `lorem  ddd`,
-      tag: `PROGRAMMING`,
-    },
-  ],
+
+  // corsi2: [
+  //   {
+  //     image: `src/assets/img/main/carosello/corso-3.jpg`,
+  //     title: `Financial Modelling`,
+  //     teacher: `Edward Bowman`,
+  //     bedge: `20€`,
+  //     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio perferendis cumque iste sapiente ab culpa voluptatem quod.`,
+  //     tag: `BUSINESS    `,
+  //   },
+  //   {
+  //     image: `src/assets/img/main/carosello/corso-2.jpg`,
+  //     title: `Web Designing`,
+  //     teacher: `Jennifer Powell`,
+  //     bedge: `FREE`,
+  //     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reiciendis voluptatibus repellendus eligendi ab? Perspiciatis facilis.`,
+  //     tag: `PROGRAMMING`,
+  //   },
+  //   {
+  //     image: `src/assets/img/main/carosello/corso-1.jpg`,
+  //     title: `Android Developer`,
+  //     teacher: `David Sanders`,
+  //     bedge: `FREE`,
+  //     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem tempora odio ducimus voluptates voluptatum consectetur.`,
+  //     tag: `PROGRAMMING`,
+  //   },
+  // ],
+  // corsi3: [
+  //   {
+  //     image: `src/assets/img/main/carosello/corso-2.jpg`,
+  //     title: `Web Designing`,
+  //     teacher: `Jennifer Powell`,
+  //     bedge: `FREE`,
+  //     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reiciendis voluptatibus repellendus eligendi ab? Perspiciatis facilis.`,
+  //     tag: `PROGRAMMING`,
+  //   },
+  //   {
+  //     image: `src/assets/img/main/carosello/corso-3.jpg`,
+  //     title: `Financial Modelling`,
+  //     teacher: `Edward Bowman`,
+  //     bedge: `20€`,
+  //     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio perferendis cumque iste sapiente ab culpa voluptatem quod.`,
+  //     tag: `BUSINESS    `,
+  //   },
+  //   {
+  //     image: `src/assets/img/main/carosello/corso-1.jpg`,
+  //     title: `Android Developer`,
+  //     teacher: `David Sanders`,
+  //     bedge: `FREE`,
+  //     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem tempora odio ducimus voluptates voluptatum consectetur.`,
+  //     tag: `PROGRAMMING`,
+  //   },
+  // ],
 });
