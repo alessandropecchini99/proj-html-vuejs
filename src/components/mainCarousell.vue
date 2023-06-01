@@ -82,6 +82,10 @@ export default {
 <style lang="scss" scoped>
 @use "../assets/variables.scss" as *;
 
+hr {
+  margin-top: 0px;
+}
+
 section {
   height: fit-content;
   padding-bottom: 5em;
@@ -90,6 +94,7 @@ section {
   .myContainer {
     @include myContainer;
     width: 70%;
+    cursor: default;
 
     .title {
       text-align: center;
@@ -195,6 +200,7 @@ section {
           height: 15px;
           width: 15px;
           border-radius: 50px;
+          cursor: pointer;
         }
 
         .active {

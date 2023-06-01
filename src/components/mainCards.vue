@@ -66,7 +66,7 @@ section {
   .myContainer {
     @include myContainer;
     height: fit-content;
-    padding-top: 4.5em;
+    padding-top: 5.5em;
 
     display: flex;
     .card-disponibili {

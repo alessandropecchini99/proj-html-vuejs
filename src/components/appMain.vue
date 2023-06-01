@@ -46,6 +46,10 @@ export default {
           text: [`6`, `30 Days`, true, true, true, true, true, true],
         },
       ],
+      arrSvg: [
+        `src/assets/img/main/plans/svg-1.svg`,
+        `src/assets/img/main/plans/svg-2.svg`,
+      ],
       // ARRAY LOGO
       arrLogo: [
         `src/assets/img/footer/iAcademy.png`,
@@ -72,7 +76,11 @@ export default {
     <mainReview />
     <mainCards />
     <mainCarousell />
-    <mainPlans :arrPlans="this.arrPlans" :arrPlanType="this.arrPlanType" />
+    <mainPlans
+      :arrPlans="this.arrPlans"
+      :arrPlanType="this.arrPlanType"
+      :arrSvg="this.arrSvg"
+    />
     <mainLogo :arrLogo="this.arrLogo" :arrLogoHover="this.arrLogoHover" />
   </main>
 </template>

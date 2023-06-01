@@ -91,6 +91,7 @@ section {
       width: 200px;
       height: 300px;
       transition: 0.2s ease;
+      cursor: pointer;
 
       display: flex;
       justify-content: center;

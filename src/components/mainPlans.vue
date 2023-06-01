@@ -3,11 +3,11 @@ export default {
   props: {
     arrPlans: String,
     arrPlanType: Object,
+    arrSvg: String,
   },
 };
 </script>
 
-•
 <template>
   <!-- PLANS -->
   <hr />
@@ -55,11 +55,24 @@ export default {
           </div>
         </div>
       </div>
+      <div class="svg-icon">
+        <div class="svg-container-circle">
+          <img :src="arrSvg[0]" alt="svg2" class="circle" />
+        </div>
+
+        <div class="svg-container-cart">
+          <img :src="arrSvg[1]" alt="svg2" class="cart" />
+        </div>
+      </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
+hr {
+  margin-top: 0px;
+}
+
 section {
   height: fit-content;
   padding-bottom: 3em;
@@ -90,6 +103,8 @@ section {
     display: flex;
     justify-content: center;
     background-color: white;
+    position: relative;
+    width: fit-content;
 
     .service {
       height: fit-content;
@@ -219,6 +234,41 @@ section {
               color: white;
             }
           }
+        }
+      }
+    }
+
+    .svg-icon {
+      position: absolute;
+      top: 20px;
+      right: -57px;
+      padding: 0.5em;
+
+      .svg-container-circle {
+        width: 50px;
+        height: 50px;
+        padding: 2px;
+        background-color: #ef2853;
+        margin-bottom: 0.7em;
+
+        &:hover {
+          filter: opacity(0.8);
+        }
+        .circle {
+          width: 100%;
+        }
+      }
+      .svg-container-cart {
+        width: 50px;
+        height: 50px;
+        padding: 6px;
+        box-shadow: 0px 0px 9px -1px rgb(187, 187, 187);
+
+        &:hover {
+          filter: opacity(0.8);
+        }
+        .cart {
+          width: 100%;
         }
       }
     }
