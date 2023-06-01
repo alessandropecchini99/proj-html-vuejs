@@ -1,4 +1,5 @@
 <script>
+import mainIcon from "./mainComponents/mainIcon.vue";
 import mainInfo from "./mainComponents/mainInfo.vue";
 import mainReview from "./mainComponents/mainReview.vue";
 import mainCards from "./mainComponents/mainCards.vue";
@@ -8,6 +9,7 @@ import mainLogo from "./mainComponents/mainLogo.vue";
 
 export default {
   components: {
+    mainIcon,
     mainInfo,
     mainReview,
     mainCards,
@@ -20,6 +22,7 @@ export default {
 
 <template>
   <main>
+    <mainIcon />
     <mainInfo />
     <mainReview />
     <mainCards />
