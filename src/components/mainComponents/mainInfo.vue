@@ -1,5 +1,6 @@
 <script>
-import { store } from "../store";
+import { store } from "../../store";
+
 export default {
   data() {
     return {
@@ -33,7 +34,7 @@ export default {
         voluptate illo voluptatem architecto explicabo sequi.
       </p>
       <button>LEARN MORE</button>
-      <img src="../assets/img/main/info/learn-more-1.jpg" alt="learn-more-1" />
+      <img :src="store.arrImage[0]" alt="learn-more-1" />
     </div>
 
     <!-- -------------- hr ----------------- -->
@@ -42,7 +43,7 @@ export default {
     <!-- sezione empoweing -->
     <div class="empowering">
       <div class="globo-image">
-        <img src="../assets/img/main/info/learn-more-2.jpg" alt="globo" />
+        <img :src="store.arrImage[1]" alt="globo" />
       </div>
       <div class="empower-info">
         <h1>
@@ -72,7 +73,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../assets/variables.scss" as *;
+@use "../../assets/variables.scss" as *;
 
 section {
   // sezione icone

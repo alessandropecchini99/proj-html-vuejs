@@ -1,9 +1,11 @@
 <script>
+import { store } from "../../store";
+
 export default {
-  props: {
-    arrPlans: String,
-    arrPlanType: Object,
-    arrSvg: String,
+  data() {
+    return {
+      store,
+    };
   },
 };
 </script>
@@ -28,14 +30,14 @@ export default {
             by paying weekly
           </h2>
         </div>
-        <div v-for="data in arrPlans">
+        <div v-for="data in store.arrPlans">
           <p>{{ data }}</p>
         </div>
       </div>
 
       <div class="piani">
         <div
-          v-for="plan in arrPlanType"
+          v-for="plan in store.arrPlanType"
           :key="plan.title.name"
           class="colonnaTitolo"
         >
@@ -57,11 +59,11 @@ export default {
       </div>
       <div class="svg-icon">
         <div class="svg-container-circle">
-          <img :src="arrSvg[0]" alt="svg2" class="circle" />
+          <img :src="store.arrSvg[0]" alt="svg2" class="circle" />
         </div>
 
         <div class="svg-container-cart">
-          <img :src="arrSvg[1]" alt="svg2" class="cart" />
+          <img :src="store.arrSvg[1]" alt="svg2" class="cart" />
         </div>
       </div>
     </div>
@@ -76,7 +78,7 @@ hr {
 section {
   height: fit-content;
   padding-bottom: 3em;
-  background-image: url(../assets/img/main/bck.png);
+  background-image: url(../../assets/img/main/bck.png);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -272,10 +274,6 @@ section {
         }
       }
     }
-  }
-
-  .lastItem {
-    color: red;
   }
 }
 </style>

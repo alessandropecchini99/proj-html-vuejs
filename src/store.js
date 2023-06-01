@@ -28,6 +28,10 @@ export const store = reactive({
       text: `DIY & Craft`,
     },
   ],
+  arrImage: [
+    `../src/assets/img/main/info/learn-more-1.jpg`,
+    `../src/assets/img/main/info/learn-more-2.jpg`,
+  ],
 
   // mainReview -----------------
   reviewActiveIndex: 0,
@@ -107,85 +111,139 @@ export const store = reactive({
 
   // CAROSELLO ----------------
 
-  corsi: [{}, {}, {}],
-
-  corsi1: [
+  carIndex: 0,
+  corsi: [
     {
-      image: `src/assets/img/main/carosello/corso-1.jpg`,
-      title: `Android Developer`,
-      teacher: `David Sanders`,
-      bedge: `FREE`,
-      text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem tempora odio ducimus voluptates voluptatum consectetur.`,
-      tag: `PROGRAMMING`,
+      corso1: [
+        {
+          image: `src/assets/img/main/carosello/corso-1.jpg`,
+          title: `Android Developer`,
+          teacher: `David Sanders`,
+          bedge: `FREE`,
+          text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem tempora odio ducimus voluptates voluptatum consectetur.`,
+          tag: `PROGRAMMING`,
+        },
+        {
+          image: `src/assets/img/main/carosello/corso-2.jpg`,
+          title: `Web Designing`,
+          teacher: `Jennifer Powell`,
+          bedge: `FREE`,
+          text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reiciendis voluptatibus repellendus eligendi ab? Perspiciatis facilis.`,
+          tag: `PROGRAMMING`,
+        },
+        {
+          image: `src/assets/img/main/carosello/corso-3.jpg`,
+          title: `Financial Modelling`,
+          teacher: `Edward Bowman`,
+          bedge: `20€`,
+          text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio perferendis cumque iste sapiente ab culpa voluptatem quod.`,
+          tag: `BUSINESS    `,
+        },
+      ],
     },
     {
-      image: `src/assets/img/main/carosello/corso-2.jpg`,
-      title: `Web Designing`,
-      teacher: `Jennifer Powell`,
-      bedge: `FREE`,
-      text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reiciendis voluptatibus repellendus eligendi ab? Perspiciatis facilis.`,
-      tag: `PROGRAMMING`,
+      corso2: [
+        {
+          image: `src/assets/img/main/carosello/corso-3.jpg`,
+          title: `Financial Modelling`,
+          teacher: `Edward Bowman`,
+          bedge: `20€`,
+          text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio perferendis cumque iste sapiente ab culpa voluptatem quod.`,
+          tag: `BUSINESS    `,
+        },
+        {
+          image: `src/assets/img/main/carosello/corso-1.jpg`,
+          title: `Android Developer`,
+          teacher: `David Sanders`,
+          bedge: `FREE`,
+          text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem tempora odio ducimus voluptates voluptatum consectetur.`,
+          tag: `PROGRAMMING`,
+        },
+        {
+          image: `src/assets/img/main/carosello/corso-2.jpg`,
+          title: `Web Designing`,
+          teacher: `Jennifer Powell`,
+          bedge: `FREE`,
+          text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reiciendis voluptatibus repellendus eligendi ab? Perspiciatis facilis.`,
+          tag: `PROGRAMMING`,
+        },
+      ],
     },
     {
-      image: `src/assets/img/main/carosello/corso-3.jpg`,
-      title: `Financial Modelling`,
-      teacher: `Edward Bowman`,
-      bedge: `20€`,
-      text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio perferendis cumque iste sapiente ab culpa voluptatem quod.`,
-      tag: `BUSINESS    `,
+      corso3: [
+        {
+          image: `src/assets/img/main/carosello/corso-2.jpg`,
+          title: `Web Designing`,
+          teacher: `Jennifer Powell`,
+          bedge: `FREE`,
+          text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reiciendis voluptatibus repellendus eligendi ab? Perspiciatis facilis.`,
+          tag: `PROGRAMMING`,
+        },
+        {
+          image: `src/assets/img/main/carosello/corso-3.jpg`,
+          title: `Financial Modelling`,
+          teacher: `Edward Bowman`,
+          bedge: `20€`,
+          text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio perferendis cumque iste sapiente ab culpa voluptatem quod.`,
+          tag: `BUSINESS    `,
+        },
+        {
+          image: `src/assets/img/main/carosello/corso-1.jpg`,
+          title: `Android Developer`,
+          teacher: `David Sanders`,
+          bedge: `FREE`,
+          text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem tempora odio ducimus voluptates voluptatum consectetur.`,
+          tag: `PROGRAMMING`,
+        },
+      ],
     },
   ],
-
-  // corsi2: [
-  //   {
-  //     image: `src/assets/img/main/carosello/corso-3.jpg`,
-  //     title: `Financial Modelling`,
-  //     teacher: `Edward Bowman`,
-  //     bedge: `20€`,
-  //     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio perferendis cumque iste sapiente ab culpa voluptatem quod.`,
-  //     tag: `BUSINESS    `,
-  //   },
-  //   {
-  //     image: `src/assets/img/main/carosello/corso-2.jpg`,
-  //     title: `Web Designing`,
-  //     teacher: `Jennifer Powell`,
-  //     bedge: `FREE`,
-  //     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reiciendis voluptatibus repellendus eligendi ab? Perspiciatis facilis.`,
-  //     tag: `PROGRAMMING`,
-  //   },
-  //   {
-  //     image: `src/assets/img/main/carosello/corso-1.jpg`,
-  //     title: `Android Developer`,
-  //     teacher: `David Sanders`,
-  //     bedge: `FREE`,
-  //     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem tempora odio ducimus voluptates voluptatum consectetur.`,
-  //     tag: `PROGRAMMING`,
-  //   },
-  // ],
-  // corsi3: [
-  //   {
-  //     image: `src/assets/img/main/carosello/corso-2.jpg`,
-  //     title: `Web Designing`,
-  //     teacher: `Jennifer Powell`,
-  //     bedge: `FREE`,
-  //     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus reiciendis voluptatibus repellendus eligendi ab? Perspiciatis facilis.`,
-  //     tag: `PROGRAMMING`,
-  //   },
-  //   {
-  //     image: `src/assets/img/main/carosello/corso-3.jpg`,
-  //     title: `Financial Modelling`,
-  //     teacher: `Edward Bowman`,
-  //     bedge: `20€`,
-  //     text: `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam distinctio perferendis cumque iste sapiente ab culpa voluptatem quod.`,
-  //     tag: `BUSINESS    `,
-  //   },
-  //   {
-  //     image: `src/assets/img/main/carosello/corso-1.jpg`,
-  //     title: `Android Developer`,
-  //     teacher: `David Sanders`,
-  //     bedge: `FREE`,
-  //     text: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto exercitationem tempora odio ducimus voluptates voluptatum consectetur.`,
-  //     tag: `PROGRAMMING`,
-  //   },
-  // ],
+  // ARRAY PLANS --------------
+  arrPlans: [
+    `Number of Courses`,
+    `Time`,
+    `Web Designing`,
+    `Human-Centered Design`,
+    `Basic Marketing`,
+    `Python for Everybody`,
+    `Android Developer`,
+    `Business English`,
+  ],
+  arrPlanType: [
+    {
+      title: {
+        name: `Standard`,
+        image: `src/assets/img/main/plans/plan-1.png`,
+      },
+      price: `12€`,
+      text: [`2`, `15 Days`, true, true, false, false, false, false],
+    },
+    {
+      title: {
+        name: `Professional`,
+        image: `src/assets/img/main/plans/plan-2.png`,
+      },
+      price: `59€`,
+      text: [`4`, `30 Days`, true, true, true, true, false, false],
+    },
+    {
+      title: {
+        name: `Advanced`,
+        image: `src/assets/img/main/plans/plan-3.png`,
+      },
+      price: `88€`,
+      text: [`6`, `30 Days`, true, true, true, true, true, true],
+    },
+  ],
+  arrSvg: [
+    `src/assets/img/main/plans/svg-1.svg`,
+    `src/assets/img/main/plans/svg-2.svg`,
+  ],
+  // ARRAY LOGO -----------
+  arrLogo: [
+    `src/assets/img/footer/iAcademy.png`,
+    `src/assets/img/footer/uni.png`,
+    `src/assets/img/footer/edu.png`,
+    `src/assets/img/footer/teach.png`,
+  ],
 });

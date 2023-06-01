@@ -1,64 +1,12 @@
 <script>
-import mainInfo from "./mainInfo.vue";
-import mainReview from "./mainReview.vue";
-import mainCards from "./mainCards.vue";
-import mainCarousell from "./mainCarousell.vue";
-import mainPlans from "./mainPlans.vue";
-import mainLogo from "./mainLogo.vue";
+import mainInfo from "./mainComponents/mainInfo.vue";
+import mainReview from "./mainComponents/mainReview.vue";
+import mainCards from "./mainComponents/mainCards.vue";
+import mainCarousell from "./mainComponents/mainCarousell.vue";
+import mainPlans from "./mainComponents/mainPlans.vue";
+import mainLogo from "./mainComponents/mainLogo.vue";
 
 export default {
-  data() {
-    return {
-      // ARRAY PLANS
-      arrPlans: [
-        `Number of Courses`,
-        `Time`,
-        `Web Designing`,
-        `Human-Centered Design`,
-        `Basic Marketing`,
-        `Python for Everybody`,
-        `Android Developer`,
-        `Business English`,
-      ],
-      arrPlanType: [
-        {
-          title: {
-            name: `Standard`,
-            image: `src/assets/img/main/plans/plan-1.png`,
-          },
-          price: `12€`,
-          text: [`2`, `15 Days`, true, true, false, false, false, false],
-        },
-        {
-          title: {
-            name: `Professional`,
-            image: `src/assets/img/main/plans/plan-2.png`,
-          },
-          price: `59€`,
-          text: [`4`, `30 Days`, true, true, true, true, false, false],
-        },
-        {
-          title: {
-            name: `Advanced`,
-            image: `src/assets/img/main/plans/plan-3.png`,
-          },
-          price: `88€`,
-          text: [`6`, `30 Days`, true, true, true, true, true, true],
-        },
-      ],
-      arrSvg: [
-        `src/assets/img/main/plans/svg-1.svg`,
-        `src/assets/img/main/plans/svg-2.svg`,
-      ],
-      // ARRAY LOGO
-      arrLogo: [
-        `src/assets/img/footer/iAcademy.png`,
-        `src/assets/img/footer/uni.png`,
-        `src/assets/img/footer/edu.png`,
-        `src/assets/img/footer/teach.png`,
-      ],
-    };
-  },
   components: {
     mainInfo,
     mainReview,
@@ -76,12 +24,8 @@ export default {
     <mainReview />
     <mainCards />
     <mainCarousell />
-    <mainPlans
-      :arrPlans="this.arrPlans"
-      :arrPlanType="this.arrPlanType"
-      :arrSvg="this.arrSvg"
-    />
-    <mainLogo :arrLogo="this.arrLogo" :arrLogoHover="this.arrLogoHover" />
+    <mainPlans />
+    <mainLogo />
   </main>
 </template>
 

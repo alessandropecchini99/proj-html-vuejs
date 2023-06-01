@@ -1,5 +1,5 @@
 <script>
-import { store } from "../store";
+import { store } from "../../store";
 export default {
   data() {
     return {
@@ -49,7 +49,7 @@ export default {
           :class="{ active: index == store.reviewActiveIndex }"
         >
           <img
-            src="../assets/img/main/review/img-trasparente.png"
+            src="../../assets/img/main/review/img-trasparente.png"
             class="d-block w-100"
             alt="trasparente"
           />
@@ -64,76 +64,17 @@ export default {
             </div>
           </div>
         </div>
-        <!-- <div class="carousel-item active">
-          <img
-            src="../assets/img/main/review/img-trasparente.png"
-            class="d-block w-100"
-            alt="trasparente"
-          />
-          <div class="revStyle carousel-caption">
-            <img src="../assets/img/main/review/review-1.png" alt="person-1" />
-            <p>
-              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. A quo
-              iusto facilis magni rem corporis similique sunt ipsam, magnam, ea
-              vitae blanditiis. Voluptate modi est nulla reiciendis, a earum
-              mollitia, adipisicing elit!"
-            </p>
-            <div>
-              <h3>Joan Collins</h3>
-              <h5>STUDENT</h5>
-            </div>
-          </div> -->
-        <!-- <div class="carousel-item">
-          <img
-            src="../assets/img/main/review/img-trasparente.png"
-            class="d-block w-100"
-            alt="trasparente"
-          />
-          <div class="revStyle carousel-caption">
-            <img src="../assets/img/main/review/review-2.png" alt="person-2" />
-            <p>
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo,
-              consequuntur odit? Consequuntur rem perspiciatis temporibus totam
-              ducimus! Voluptate facere at, id voluptatibus impedit tempora
-              dolores fugiat ipsam praesentium culpa."
-            </p>
-            <div>
-              <h3>Marta Smith</h3>
-              <h5>STUDENT</h5>
-            </div>
-          </div>
-        </div> -->
-        <!-- <div class="carousel-item">
-          <img
-            src="../assets/img/main/review/img-trasparente.png"
-            class="d-block w-100"
-            alt="trasparente"
-          />
-          <div class="revStyle carousel-caption">
-            <img src="../assets/img/main/review/review-3.png" alt="person-3" />
-            <p>
-              "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-              eum dolor minus doloribus nobis laboriosam molestiae ipsa hic
-              dolorem! Porro soluta pariatur illum perferendis magni aliquid
-              officiis sapiente labore ullam?"
-            </p>
-            <div>
-              <h3>Johnny Bravo</h3>
-              <h5>STUDENT</h5>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>
 </template>
 
 <style lang="scss" scoped>
-@use "../assets/variables.scss" as *;
+@use "../../assets/variables.scss" as *;
 
 section {
   color: white;
-  background-image: url(../assets/img/main/review/bck-mondo.png);
+  background-image: url(../../assets/img/main/review/bck-mondo.png);
   background-position: top;
 
   #carouselExampleCaptions {

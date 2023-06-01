@@ -1,5 +1,6 @@
 <script>
-import { store } from "../store";
+import { store } from "../../store";
+
 export default {
   data() {
     return {
@@ -56,7 +57,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../assets/variables.scss" as *;
+@use "../../assets/variables.scss" as *;
 
 section {
   height: 700px;

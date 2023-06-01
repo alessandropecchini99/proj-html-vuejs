@@ -1,8 +1,11 @@
 <script>
+import { store } from "../../store";
+
 export default {
-  props: {
-    arrLogo: String,
-    arrLogoHover: String,
+  data() {
+    return {
+      store,
+    };
   },
 };
 </script>
@@ -12,7 +15,7 @@ export default {
   <hr />
   <section>
     <div class="myContainer">
-      <div v-for="logo in arrLogo" :key="logo">
+      <div v-for="logo in store.arrLogo" :key="logo">
         <img :src="logo" :alt="logo" />
       </div>
     </div>
@@ -20,7 +23,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../assets/variables.scss" as *;
+@use "../../assets/variables.scss" as *;
 
 hr {
   margin: 0px;
